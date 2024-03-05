@@ -1,0 +1,46 @@
+﻿<Window x:Class="Practice.View.EditNewAbonentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practice.View"
+        mc:Ignorable="d"
+        Title="EditNewAbonentWindow" Height="350" Width="300"
+        Name="EditAbonentWnd">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Vertical" 
+    HorizontalAlignment="Center"
+    VerticalAlignment="Center"
+    Width="200">
+
+            <TextBlock Text="Country"/>
+            <TextBox x:Name="CountryBlock" Text="{Binding AbonentCountry}" PreviewTextInput="PreviewTextInput"/>
+
+            <TextBlock Text="City"/>
+            <TextBox x:Name="CityBlock" Text="{Binding AbonentCity}" PreviewTextInput="PreviewTextInput"/>
+
+            <TextBlock Text="Pnumber"/>
+            <TextBox x:Name="PnumberBlock" Text="{Binding AbonentPnumber}" PreviewTextInput="PreviewTextInput"/>
+
+            <TextBlock Text="Fax"/>
+            <TextBox x:Name="FaxBlock" Text="{Binding AbonentFax}" PreviewTextInput="PreviewTextInput"/>
+
+            <TextBlock Text="Description"/>
+            <TextBox x:Name="DescriptionBlock" Text="{Binding AbonentDescription}"/>
+
+            <TextBlock Text="Ptype"/>
+            <TextBox x:Name="PtypeBlock" Text="{Binding AbonentPtype}" PreviewTextInput="PreviewTextInput"/>
+
+            <TextBlock Text="Secure"/>
+            <TextBox x:Name="SecureBlock" Text="{Binding AbonentSecure}" PreviewTextInput="PreviewTextInput"/>
+        </StackPanel>
+
+        <Button Grid.Row="1" Content="Изменить Abonent" Command="{Binding EditAbonent}"
+CommandParameter="{Binding ElementName=EditAbonentWnd}"/>
+    </Grid>
+</Window>
+
